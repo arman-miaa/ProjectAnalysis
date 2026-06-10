@@ -1,695 +1,829 @@
-# 🏗️ Project Analysis Framework
-### A Solo Full-Stack Developer's Pre-Development Playbook
+# 🚀 The Solo Developer's Master Framework
 
-> **কোড লেখার আগে এই document সম্পূর্ণ করুন।**
-> Figma Designer যেভাবে ডিজাইন শুরু করার আগে সব analyze করে, আপনিও সেভাবে।
+### From Client Requirement → Figma Design → Deployment
 
----
+> **একটি ফ্রেমওয়ার্ক, দুইটি ট্র্যাক।**
+> প্রোজেক্টের সাইজ অনুযায়ী শুধু দরকারি ধাপগুলো ফলো করুন।
 
-## 📋 Table of Contents
-
-1. [Business Analysis](#1-business-analysis)
-2. [Competitor Research](#2-competitor-research)
-3. [User Personas](#3-user-personas)
-4. [User Flow Design](#4-user-flow-design)
-5. [Sitemap](#5-sitemap)
-6. [Feature Breakdown](#6-feature-breakdown)
-7. [Page Inventory](#7-page-inventory)
-8. [Section Structure](#8-section-structure)
-9. [Content Hierarchy](#9-content-hierarchy)
-10. [Wireframe Planning](#10-wireframe-planning)
-11. [Design System](#11-design-system)
-12. [Database Schema](#12-database-schema)
-13. [API Planning](#13-api-planning)
-14. [Development Roadmap](#14-development-roadmap)
-15. [MVP Definition](#15-mvp-definition)
-16. [Pre-Development Checklist](#-pre-development-checklist)
-17. [AI Mega-Prompt](#-ai-mega-prompt)
+```text
+                    📝 Client Requirement
+                            │
+            ┌───────────────┴───────────────┐
+            ▼                               ▼
+    🎨 DESIGN TRACK                  🛠️ DEVELOPMENT TRACK
+   (ছোট প্রজেক্টের জন্য)            (বড় প্রজেক্টের জন্য)
+            │                               │
+            ▼                               ▼
+     Figma Design Done              Database → API → Deploy
+            │                               │
+            └───────────────┬───────────────┘
+                            ▼
+                    ⚡ Development Phase
+                            │
+                            ▼
+                    🚀 Launch Project
+```
 
 ---
 
-## 1. Business Analysis
+## 📊 Framework Usage Guide
+
+| প্রজেক্ট টাইপ | কী কী ধাপ ফলো করবেন | সময় |
+|---------------|---------------------|------|
+| **Landing Page / Portfolio** | 1 → 3 → 5 → 7 → 8 → 11 | ২-৩ ঘণ্টা |
+| **Small Business Website** | 1 → 2 → 3 → 5 → 7 → 8 → 11 | ৩-৪ ঘণ্টা |
+| **SaaS / Dashboard** | সম্পূর্ণ ১-১৫ | ১-২ দিন |
+| **E-commerce / LMS** | সম্পূর্ণ ১-১৫ | ২-৩ দিন |
+
+---
+
+## 🎯 Phase 1: Foundation (Design Track + Dev Track Common)
+
+> **এই ধাপগুলো সব প্রজেক্টের জন্যই করতে হবে।**
+
+---
+
+### 1. Business Analysis
 
 **উদ্দেশ্য:** Client কী বানাতে চায় এবং কেন — সেটা একদম পরিষ্কার করা।
 
-### Client থেকে জানতে হবে
+#### Client থেকে জানতে হবে
 
 | প্রশ্ন | উত্তর |
 |--------|-------|
-| এই প্রজেক্টের উদ্দেশ্য কী? | |
-| কারা ব্যবহার করবে? | |
-| ব্যবহারকারীরা কী কাজ করতে পারবে? | |
-| Revenue Model কী? (Subscription / One-time / Freemium) | |
-| কারা Competitor? | |
+| প্রজেক্টের মূল উদ্দেশ্য কী? | |
+| কারা ব্যবহার করবে? (Target Audience) | |
+| User কী কী core task করতে পারবে? | |
+| Revenue Model কী? | |
+| Competitor কারা? (অন্তত ২টা নাম) | |
 | Success কীভাবে measure হবে? | |
-| Budget এবং Timeline কী? | |
 
-### এই Step-এর Output
+#### Output
 
-```
-Business Goal    : [এক লাইনে]
-Problem Statement: [User কোন সমস্যায় আছে?]
-Solution         : [এই প্রজেক্ট কীভাবে সমাধান দেবে?]
-Target Audience  : [Primary + Secondary]
-Revenue Model    : [কীভাবে টাকা আসবে?]
-```
-
----
-
-## 2. Competitor Research
-
-**উদ্দেশ্য:** Market কী করছে সেটা দেখে নিজের product কোথায় দাঁড়াবে বোঝা।
-
-### ন্যূনতম ৫টি Competitor বিশ্লেষণ করুন
-
-| Competitor | URL | Strength | Weakness | Opportunity |
-|------------|-----|----------|----------|-------------|
-| 1. | | | | |
-| 2. | | | | |
-| 3. | | | | |
-| 4. | | | | |
-| 5. | | | | |
-
-### প্রতিটি Competitor-এ এগুলো দেখুন
-
-- **Navigation Structure** — কোন menu, কোন flow?
-- **Hero Section** — কী CTA, কী headline?
-- **Feature Presentation** — কীভাবে features দেখাচ্ছে?
-- **Pricing Page** — কী model, কী tier?
-- **Onboarding Flow** — Register → Dashboard পর্যন্ত কটা step?
-- **Design Style** — Color, font, spacing কেমন?
-
-### এই Step-এর Output
-
-```
-Market Gap    : [কোন জায়গায় সবাই weak?]
-Differentiation: [আমাদের product কোথায় আলাদা হবে?]
-Design Direction: [কোন competitor-এর design আমাদের inspire করবে?]
+```text
+🎯 Business Goal : [এক লাইনে]
+❌ Problem       : [User কী সমস্যায় ভুগছে?]
+✅ Solution      : [আমাদের প্রজেক্ট কীভাবে সমাধান দেবে?]
+👥 Audience      : [Primary User + Secondary User]
+💵 Revenue Model : [Subscription / One-time / Freemium / Ads]
 ```
 
 ---
 
-## 3. User Personas
+### 2. Competitor Research
 
-**উদ্দেশ্য:** কার জন্য বানাচ্ছি সেটা concrete করা — assumptions নয়, real profiles।
+**উদ্দেশ্য:** Market-এ কে কী করছে সেটা দেখে নিজের পজিশন ঠিক করা।
 
-### Persona Template
+#### ন্যূনতম ৩-৫টি Competitor বিশ্লেষণ করুন
 
+| # | Competitor Name | URL | Strength | Weakness | Opportunity |
+|---|-----------------|-----|----------|----------|-------------|
+| 1 | | | | | |
+| 2 | | | | | |
+| 3 | | | | | |
+
+#### Design-Specific Analysis
+
+```text
+✅ Hero Section Pattern    : [কী CTA, কী Headline?]
+✅ Navigation Structure    : [কী menu, কী flow?]
+✅ Feature Presentation    : [Grid, List, Card?]
+✅ Dashboard Layout        : [Sidebar, Topbar, Stats?]
+✅ Color & Typography      : [কী color scheme?]
 ```
+
+#### Output
+
+```text
+📊 Market Gap      : [কোন জায়গাটা সবাই মিস করছে?]
+🚀 Differentiation : [আমাদের product কোথায় stand out করবে?]
+🎨 Design Direction: [কোন competitor-এর UI inspire করবে?]
+```
+
+---
+
+### 3. User Persona
+
+**উদ্দেশ্য:** কার জন্য বানাচ্ছি সেটা concrete করা — assumption নয়, real profile.
+
+```text
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-PERSONA 1: [Name]
+👤 PERSONA 1: [নাম]
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Role       : [Student / Manager / Admin]
-Age Range  : [18-25 / 30-45]
+Role       : [Student / Freelancer / Manager]
+Age Range  : [18-25 / 25-40 / 40+]
 Tech Level : [Beginner / Intermediate / Advanced]
 
-Goals
-  → [লক্ষ্য ১]
-  → [লক্ষ্য ২]
+🎯 Goals
+  → [মূল লক্ষ্য ১]
+  → [মূল লক্ষ্য ২]
 
-Pain Points
+😫 Pain Points
   → [সমস্যা ১]
   → [সমস্যা ২]
 
-Devices    : [Mobile / Desktop / Both]
-Use Context: [কোথায় use করবে? Work / Home / On-the-go]
+📱 Devices    : [Mobile / Desktop / Both]
+📍 Use Context: [কোথায় ব্যবহার করবে? বাসায়? অফিসে? রাস্তায়?]
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
 
-> 📌 **Tip:** Primary persona-র জন্য design করুন, secondary persona-র জন্য accommodate করুন।
+> 📌 **রুল:** Primary persona-র জন্য design করুন, secondary persona-র জন্য accommodate করুন।
 
 ---
 
-## 4. User Flow Design
+### 4. User Flow Design
 
 **উদ্দেশ্য:** User কোন path-এ navigate করবে সেটা map করা।
 
-### Main Flow (Happy Path)
+#### Main Flow (Happy Path)
 
-```
-[Entry Point]
-     ↓
-[Landing Page]
-     ↓
-[Sign Up / Login]
-     ↓
-[Onboarding / Dashboard]
-     ↓
-[Core Action] ← এটাই প্রজেক্টের মূল কাজ
-     ↓
-[Success / Confirmation]
-```
-
-### Alternative Flows
-
-```
-Unauthenticated User → Protected Page → Redirect to Login → Return to original page
-Forgot Password → Email OTP → Reset → Login
-Free User → Premium Feature → Upgrade Prompt → Checkout
+```text
+[Entry Point: Google/Facebook/Search]
+              ↓
+        [Landing Page]
+              ↓
+        [Sign Up / Login]
+              ↓
+    [Onboarding / Dashboard]
+              ↓
+        [Core Action] ← এটাই প্রজেক্টের মূল কাজ
+              ↓
+    [Success / Confirmation]
 ```
 
-### Edge Cases
+#### Edge Cases (সব প্রজেক্টের জন্য important)
 
-```
-□ Empty State (data নেই)
-□ Error State (API fail)
-□ Loading State
-□ Permission Denied
-□ Session Expired
+```text
+□ Empty State      → Dashboard-এ নতুন user কিছুই দেখবে না, তখন কী দেখাবে?
+□ Error State      → API fail করলে বা ভুল input দিলে কী দেখাবে?
+□ Loading State    → Skeleton loader, spinner কেমন হবে?
+□ Unauthorized     → Login না করে protected page-এ গেলে কী হবে?
+□ Session Expired  → Token expire হলে কী হবে?
 ```
 
 ---
 
-## 5. Sitemap
+### 5. Sitemap
 
-**উদ্দেশ্য:** পুরো প্রজেক্টের page structure একনজরে দেখা।
+**উদ্দেশ্য:** পুরো প্রজেক্টের page structure একনজরে map করা।
 
+```text
+📁 PUBLIC PAGES (সবাই দেখতে পারবে)
+├── 🏠 Home         → /
+├── 📄 About        → /about
+├── ⭐ Features     → /features
+├── 💰 Pricing      → /pricing
+├── 📝 Blog         → /blog
+│   └── Single Post → /blog/:slug
+└── 📞 Contact      → /contact
+
+📁 AUTH PAGES
+├── 🔐 Login           → /login
+├── 📝 Register        → /register
+└── 🔑 Forgot Password → /forgot-password
+
+📁 USER DASHBOARD (শুধু logged-in user)
+├── 📊 Dashboard       → /dashboard
+├── 👤 Profile         → /profile
+├── ⚙️ Settings        → /settings
+└── 📦 [Core Feature] → /[feature]
+
+📁 ADMIN PANEL (শুধু admin role)
+├── 🛡️ Admin Dashboard → /admin
+├── 👥 Users           → /admin/users
+├── 📝 Content         → /admin/content
+└── 📈 Reports         → /admin/reports
+
+📁 ERROR PAGES
+└── ❌ 404             → *
 ```
-📁 PUBLIC
-├── /                    (Home)
-├── /about
-├── /features
-├── /pricing
-├── /blog
-│   └── /blog/:slug
-└── /contact
 
-📁 AUTH
-├── /login
-├── /register
-└── /forgot-password
-
-📁 USER DASHBOARD
-├── /dashboard
-├── /profile
-├── /settings
-│   ├── /settings/account
-│   └── /settings/billing
-└── /[core-feature-pages]
-
-📁 ADMIN PANEL
-├── /admin
-├── /admin/users
-├── /admin/content
-└── /admin/reports
-```
-
-> 📌 প্রতিটি route-এর জন্য: কে access করতে পারবে (Public / Auth / Admin) সেটা mark করুন।
+> 📌 **রুল:** প্রতিটি route-এর পাশে mark করুন: 🔓 Public / 🔒 Auth / 🛡️ Admin
 
 ---
 
-## 6. Feature Breakdown
+## 🎨 Phase 2: Design Track
 
-**উদ্দেশ্য:** কী কী functionality থাকবে সেটা role-অনুযায়ী আলাদা করা।
-
-### Public Features
-
-- [ ] Landing page দেখা
-- [ ] Blog/Content পড়া
-- [ ] Contact form পাঠানো
-- [ ] Pricing দেখা
-
-### User (Authenticated) Features
-
-- [ ] Register / Login / Logout
-- [ ] Profile manage করা
-- [ ] [Core Feature 1]
-- [ ] [Core Feature 2]
-- [ ] Notifications দেখা
-- [ ] Subscription/Billing manage করা
-
-### Admin Features
-
-- [ ] User list, search, ban/unban
-- [ ] Content create/edit/delete
-- [ ] Analytics dashboard দেখা
-- [ ] Settings configure করা
+> **ছোট প্রজেক্টের জন্য এখান থেকে সরাসরি Figma-তে যান।**
 
 ---
 
-## 7. Page Inventory
+### 6. Page Inventory
 
-**উদ্দেশ্য:** কতটি page বানাতে হবে এবং প্রতিটির কী কী component দরকার।
+**উদ্দেশ্য:** কতগুলো page বানাতে হবে এবং প্রতিটির priority ঠিক করা।
 
 | Page | Route | Access | Priority |
 |------|-------|--------|----------|
-| Home | `/` | Public | P1 |
-| Login | `/login` | Public | P1 |
-| Register | `/register` | Public | P1 |
-| Dashboard | `/dashboard` | Auth | P1 |
-| Profile | `/profile` | Auth | P2 |
-| Admin Panel | `/admin` | Admin | P2 |
-| 404 | `*` | Public | P3 |
+| Home | `/` | 🔓 Public | P1 |
+| About | `/about` | 🔓 Public | P2 |
+| Contact | `/contact` | 🔓 Public | P2 |
+| Login | `/login` | 🔓 Public | P1 |
+| Register | `/register` | 🔓 Public | P1 |
+| Dashboard | `/dashboard` | 🔒 Auth | P1 |
+| Profile | `/profile` | 🔒 Auth | P2 |
+| Admin Panel | `/admin` | 🛡️ Admin | P2 |
+| 404 | `*` | 🔓 Public | P3 |
 
-> Priority: **P1** = MVP-তে লাগবেই | **P2** = Phase 2 | **P3** = Nice to have
-
----
-
-## 8. Section Structure
-
-**উদ্দেশ্য:** প্রতিটি page-এ কী কী section থাকবে — Figma Designer যেভাবে করে।
-
-### 🏠 Home Page
-```
-1. Navbar           → Logo, Navigation Links, CTA Button
-2. Hero             → Headline, Subheadline, Primary CTA, Hero Image/Video
-3. Social Proof     → Trusted by X companies, Star ratings
-4. Features         → 3-6টি feature card
-5. How It Works     → Step-by-step process (3 steps)
-6. Testimonials     → User reviews, photos
-7. Pricing          → Tier comparison table
-8. FAQ              → Accordion, 5-8 questions
-9. Final CTA        → Bold last push
-10. Footer          → Links, Legal, Social
-```
-
-### 📊 Dashboard Page
-```
-1. Topbar           → Search, Notifications, User Avatar
-2. Sidebar          → Navigation Menu
-3. Stats Overview   → KPI Cards (4টি)
-4. Main Content     → [প্রজেক্টের core feature]
-5. Recent Activity  → Timeline/List
-```
-
-### 🔐 Auth Pages (Login / Register)
-```
-1. Split Layout     → Left: Branding/Visual | Right: Form
-   অথবা
-   Center Card Layout → Logo, Form, Social Login, Switch link
-```
-
-> 📌 **Rule:** প্রতিটি section-এর জন্য কী **data** দরকার সেটাও লিখুন।
-
----
-
-## 9. Content Hierarchy
-
-**উদ্দেশ্য:** User page-এ এসে প্রথমে কী দেখবে, কী action নেবে।
-
-### Hero Section Hierarchy
-```
-1st Eye → Headline (biggest, boldest)
-2nd Eye → Subheadline (value proposition)
-3rd Eye → Primary CTA Button
-4th Eye → Supporting visual / Social proof
-```
-
-### Information Priority (F-Pattern Reading)
-```
-TOP-LEFT  → Most important (Logo, Headline)
-TOP-RIGHT → Secondary action (Login, CTA)
-MIDDLE    → Core content (Features, Benefits)
-BOTTOM    → Trust signals, Footer
-```
-
-### CTA Strategy
-```
-Primary CTA   : "Get Started Free" / "Start Trial"  → Hero + Final Section
-Secondary CTA : "Watch Demo" / "Learn More"          → Hero (below primary)
-Inline CTA    : Feature-specific actions             → Feature cards
+```text
+P1 = Must Have (MVP-তে লাগবেই)
+P2 = Important (পরের phase-এ)
+P3 = Nice to Have (সময় থাকলে)
 ```
 
 ---
 
-## 10. Wireframe Planning
+### 7. Section Structure
 
-**উদ্দেশ্য:** কোড করার আগে layout মাথায় clear করা।
+**উদ্দেশ্য:** প্রতিটি page-এ কী কী section থাকবে — Figma Designer যেভাবে ভাবে।
 
-### Tool Options
+#### 🏠 Home Page
+
+```text
+1. Navbar           → Logo, Menu Links, CTA Button
+2. Hero             → Headline, Subheadline, Primary CTA, Hero Image
+3. Social Proof     → "Trusted by X+ users", Logos, Ratings
+4. Features         → 3-6 Feature Cards (Icon + Title + Description)
+5. How It Works     → 3-Step Visual Process
+6. Testimonials     → User Reviews, Photos, Names
+7. Pricing          → Tier Comparison Table (যদি থাকে)
+8. FAQ              → Accordion Style (5-8 Common Questions)
+9. Final CTA        → Bold Background + CTA Button
+10. Footer          → Logo, Links, Social Icons, Copyright
+```
+
+#### 📊 Dashboard Page
+
+```text
+1. Topbar           → Search Bar, Notifications, User Avatar Dropdown
+2. Sidebar          → Navigation Menu (Collapsible)
+3. Stats Overview   → 4 KPI Cards (Users, Revenue, Orders, etc.)
+4. Main Content     → Core Feature-এর Table/Grid/List
+5. Recent Activity  → Timeline বা Simple List
+```
+
+#### 🔐 Auth Pages (Login / Register)
+
+```text
+Option A: Split Layout
+  Left Side  → Branding, Illustration, Tagline
+  Right Side → Form (Email, Password, Submit Button)
+
+Option B: Center Card Layout (Mobile-friendly)
+  Center → Logo, Form, Social Login Buttons, Switch Link
+```
+
+> 📌 **রুল:** প্রতিটি section-এর পাশে লিখুন কী **data** dynamic হবে, কী **static** হবে।
+
+---
+
+### 8. Content Hierarchy
+
+**উদ্দেশ্য:** User page-এ এসে প্রথমে কী দেখবে, কী action নেবে — সেটা ঠিক করা।
+
+#### Visual Hierarchy (F-Pattern Reading)
+
+```text
+TOP-LEFT  → Most Important (Logo, Headline)
+TOP-RIGHT → Secondary Action (Login, Nav CTA)
+MIDDLE    → Core Content (Features, Benefits, Pricing)
+BOTTOM    → Trust Signals (Testimonials, Footer, Legal)
+```
+
+#### Hero Section Priority
+
+```text
+1st 👁️  → Headline (সবচেয়ে বড়, bold)
+2nd 👁️  → Subheadline (value proposition)
+3rd 👁️  → Primary CTA Button (সবচেয়ে দৃশ্যমান)
+4th 👁️  → Supporting Visual (Image/Illustration/Stats)
+```
+
+#### CTA Strategy
+
+```text
+🟢 Primary CTA   : "Start Free Trial" / "Get Started" → Hero + Bottom
+🔵 Secondary CTA : "Watch Demo" / "Learn More"        → Hero (ছোট করে)
+⚪ Inline CTA    : Feature-specific buttons            → Feature Cards
+```
+
+---
+
+### 9. Wireframe Planning
+
+**উদ্দেশ্য:** Figma-তে যাওয়ার আগে layout pen-paper-এ বা টুলে sketch করা।
+
+#### Tools
+
 | Tool | Best For | Cost |
 |------|----------|------|
-| **Figma** | Full wireframe + handoff | Free/Paid |
-| **Excalidraw** | Quick sketchy wireframes | Free |
-| **Miro** | Collaborative flow | Free/Paid |
-| **Pen & Paper** | Fastest for solo dev | Free |
+| **Pen + Paper** | Fastest, no friction | Free |
+| **Excalidraw** | Digital sketch, clean look | Free |
+| **Figma** | Directly into design | Free |
+| **Relume.io** | AI-generated sitemap + wireframe | Free tier |
 
-### Wireframe Checklist
-```
-□ Mobile layout আলাদা করে ভেবেছি
-□ Sidebar collapse behavior ঠিক করেছি
-□ Modal/Drawer কোথায় কোথায় লাগবে
-□ Empty state কেমন দেখাবে
-□ Loading skeleton কোথায় থাকবে
-```
+#### Home Page Wireframe (Text-Based)
 
-> 📌 **Shortcut:** v0.dev বা Relume.io দিয়ে AI-generated wireframe নিয়ে তারপর customize করুন।
-
----
-
-## 11. Design System
-
-**উদ্দেশ্য:** Consistency — যাতে পুরো প্রজেক্টে একই look-and-feel থাকে।
-
-### Theme Selection
-```
-□ Modern SaaS    (Clean, whitespace-heavy, bold typography)
-□ Corporate      (Conservative, trust-focused, structured)
-□ Minimal        (Less is more, high contrast)
-□ Playful        (Rounded, colorful, friendly)
-□ Dark Mode First
-```
-
-### Color Palette
-```
-Primary     : #[hex]   → CTA, Links, Active states
-Secondary   : #[hex]   → Supporting elements
-Accent      : #[hex]   → Highlights, badges
-Background  : #[hex]   → Page background
-Surface     : #[hex]   → Card/Panel background
-Text Primary: #[hex]   → Headings
-Text Muted  : #[hex]   → Body, captions
-Success     : #22c55e
-Warning     : #f59e0b
-Error       : #ef4444
+```text
+┌──────────────────────────────────────┐
+│ [Logo]         [Menu] [Menu] [CTA]   │ ← Navbar
+├──────────────────────────────────────┤
+│ [Big Headline Text]     [Hero Image] │ ← Hero
+│ [Sub-headline]                       │
+│ [Primary CTA Button]                 │
+├──────────────────────────────────────┤
+│  "Trusted by..." [Logo] [Logo]       │ ← Social Proof
+├──────────────────────────────────────┤
+│ [Icon] Feature 1 [Icon] Feature 2    │ ← Features Grid
+│ [Icon] Feature 3 [Icon] Feature 4    │
+├──────────────────────────────────────┤
+│  "What our users say..."             │ ← Testimonials
+│  [Testimonial 1] [Testimonial 2]     │
+├──────────────────────────────────────┤
+│  [FAQ Accordion Item 1]              │ ← FAQ
+│  [FAQ Accordion Item 2]              │
+├──────────────────────────────────────┤
+│  [Ready to start?] [Final CTA Btn]   │ ← Final CTA
+├──────────────────────────────────────┤
+│ [Logo] [Links] [Social] [Copyright]  │ ← Footer
+└──────────────────────────────────────┘
 ```
 
-### Typography
-```
-Display Font : [Font Name] → Hero headlines, Big numbers
-Body Font    : [Font Name] → Paragraphs, UI text
-Mono Font    : [Font Name] → Code blocks, IDs
+#### Wireframe Checklist
 
-Scale:
-  xs   : 12px
-  sm   : 14px
-  base : 16px
-  lg   : 18px
-  xl   : 20px
-  2xl  : 24px
-  3xl  : 30px
-  4xl  : 36px
-  5xl  : 48px
-```
-
-### Component List
-```
-Atoms     : Button, Input, Badge, Avatar, Icon, Spinner
-Molecules : Form Field, Card, Alert, Tooltip, Dropdown
-Organisms : Navbar, Sidebar, Modal, Data Table, Form
-Templates : Auth Layout, Dashboard Layout, Marketing Layout
+```text
+□ Mobile layout (max-width: 640px) ভেবে রেখেছি
+□ Tablet layout (max-width: 1024px) adjust করেছি
+□ Desktop layout (max-width: 1440px) ঠিক করেছি
+□ Sidebar collapse behavior (mobile-এ hamburger menu)
+□ Modal/Drawer position ঠিক করেছি
+□ Empty state UI (যখন কোনো data থাকবে না)
+□ Loading skeleton/spinner design
+□ Error state (red নয়, সুন্দর illustration সহ)
 ```
 
 ---
 
-## 12. Database Schema
+### 10. Design System
 
-**উদ্দেশ্য:** Data কীভাবে store হবে সেটা আগেই ঠিক করা — পরে refactor কষ্টের।
+**উদ্দেশ্য:** পুরো প্রজেক্ট জুড়ে consistency বজায় রাখা।
 
-### Entity Identification
-```
-প্রথমে nouns বের করুন project description থেকে:
-"Users can purchase courses and track their progress"
-→ Entities: User, Course, Purchase, Progress
-```
+#### Step 1: Theme Selection
 
-### Schema Template
-
-```
-Collection/Table: users
-──────────────────────────────
-_id          : ObjectId
-email        : String (unique, required)
-passwordHash : String
-role         : Enum [user, admin]
-profile      : {
-  name       : String
-  avatar     : String (url)
-  bio        : String
-}
-createdAt    : Date
-updatedAt    : Date
-
-──────────────────────────────
-
-Collection/Table: [entity_name]
-──────────────────────────────
-_id          : ObjectId
-userId       : ObjectId (ref: users)
-[fields...]
-status       : Enum [active, inactive, deleted]
-createdAt    : Date
-updatedAt    : Date
+```text
+□ Modern SaaS      → Clean, white space, bold headings
+□ Corporate        → Conservative, trust-focused, blue tones
+□ Minimal          → Monochrome, less elements
+□ E-commerce       → Colorful, product-focused, grid-heavy
+□ Dark Mode First  → Dark bg, light text
 ```
 
-### Relationships
+#### Step 2: Color Palette
+
+```text
+🎨 Primary      : #_____  → CTA Buttons, Links, Active States
+🎨 Secondary    : #_____  → Supporting Elements, Hover States
+🎨 Accent       : #_____  → Badges, Highlights, Sale Tags
+🎨 Background   : #_____  → Main Page Background
+🎨 Surface      : #_____  → Cards, Modals, Panels
+🎨 Text Primary : #_____  → Headings, Important Text
+🎨 Text Muted   : #_____  → Body Text, Captions, Descriptions
+─────────────────────────────────────────
+✅ Success      : #22c55e  → সফল Action
+⚠️ Warning      : #f59e0b  → সতর্কতা
+❌ Error        : #ef4444  → ভুল/সমস্যা
+ℹ️ Info         : #3b82f6  → তথ্য
 ```
-users        →  1:N  →  orders
-orders       →  N:M  →  products
-users        →  1:1  →  profile
+
+#### Step 3: Typography
+
+```text
+🔤 Heading Font : [Font Name] → Hero, Section Titles
+🔤 Body Font    : [Font Name] → Paragraphs, UI Elements
+🔤 Mono Font    : [Font Name] → Code Blocks, Technical Data
+
+📏 Font Size Scale:
+  xs   : 12px   (ছোট caption, helper text)
+  sm   : 14px   (Secondary text, labels)
+  base : 16px   (Body text, inputs)
+  lg   : 18px   (Emphasized text)
+  xl   : 20px   (Card titles)
+  2xl  : 24px   (Section titles)
+  3xl  : 30px   (Page titles)
+  4xl  : 36px   (Hero subheading)
+  5xl  : 48px   (Hero heading)
+  6xl  : 60px   (Landing main headline)
+```
+
+#### Step 4: Spacing System
+
+```text
+📐 Base Unit: 4px
+
+  Section Padding (top/bottom) : 80px - 120px
+  Section Padding (left/right): 24px (mobile), 40px (desktop)
+  Container Max-Width          : 1200px
+  Card Padding                 : 24px
+  Button Padding (x/y)         : 12px / 24px
+  Input Padding                : 8px / 12px
+  Gap Between Cards            : 24px
+```
+
+#### Step 5: Component Library
+
+```text
+⚛️ ATOMS (Base Elements)
+  □ Button (Primary, Secondary, Ghost, Destructive)
+  □ Input (Text, Email, Password, Number, Search)
+  □ Select / Dropdown
+  □ Checkbox / Radio / Toggle
+  □ Badge / Tag / Label
+  □ Avatar (Image + Fallback Initials)
+  □ Icon (Lucide / HeroIcons)
+  □ Spinner / Loader
+  □ Tooltip
+
+🧩 MOLECULES (Combined Elements)
+  □ Form Field (Label + Input + Error Message)
+  □ Card (Image + Title + Description + CTA)
+  □ Alert / Notification (Success, Warning, Error, Info)
+  □ Breadcrumb
+  □ Pagination
+  □ Accordion
+
+🏗️ ORGANISMS (Complex Sections)
+  □ Navbar (Logo + Menu + CTA + Mobile Hamburger)
+  □ Sidebar (Collapsible, Active State)
+  □ Modal / Dialog
+  □ Drawer / Sheet
+  □ Data Table (Sortable, Filterable)
+  □ Form (Multi-step, Validation)
+  □ Hero Section
+  □ Footer
+
+📄 TEMPLATES (Page Layouts)
+  □ Marketing Layout (Header + Sections + Footer)
+  □ Auth Layout (Centered / Split)
+  □ Dashboard Layout (Sidebar + Topbar + Main Content)
+  □ Admin Layout
 ```
 
 ---
 
-## 13. API Planning
+## 🛠️ Phase 3: Development Track
 
-**উদ্দেশ্য:** Frontend এবং Backend কীভাবে communicate করবে সেটা আগে ঠিক করা।
+> **বড় প্রজেক্টের জন্য Design Track-এর পর এগুলো করুন।**
 
-### Convention
+---
+
+### 11. Feature Breakdown (MoSCoW)
+
+**উদ্দেশ্য:** Scope creep বন্ধ করা। কী বানাবেন, কী বানাবেন না — client-কে দেখানোর জন্য।
+
+#### 🔴 MUST HAVE (MVP — এগুলো ছাড়া প্রজেক্ট লাইভ হবে না)
+
+```text
+□ User Registration & Login (Email + Password)
+□ [Core Feature 1]
+□ [Core Feature 2]
+□ Basic Dashboard
+□ Responsive Design
+□ Essential Security (Password hashing, CSRF)
 ```
-Base URL  : /api/v1
-Auth      : Bearer Token (JWT) in Authorization header
-Response  : { success: bool, data: {}, message: string, error?: {} }
+
+#### 🟡 SHOULD HAVE (v1.1 — থাকলে experience ভালো হয়)
+
+```text
+□ Social Login (Google, GitHub)
+□ Email Notifications
+□ Search & Filter
+□ Profile Management
+□ Password Reset
 ```
 
-### Endpoint Template
+#### 🟢 NICE TO HAVE (v2 — Future, সময় বাঁচলে)
+
+```text
+□ Dark Mode
+□ Multi-language Support
+□ Advanced Analytics
+□ File Upload
+□ Export to PDF/CSV
+```
+
+#### ⚪ WON'T HAVE (এই Version-এ না)
+
+```text
+□ AI/ML Features
+□ Native Mobile App
+□ Real-time Chat
+□ Third-party API Integrations (জটিলগুলো)
+```
+
+---
+
+### 12. Database Schema
+
+**উদ্দেশ্য:** Data structure আগে ঠিক করা — পরে migration headache নেই।
+
+#### Entity Identification Rule
+
+```text
+Client-এর requirement থেকে noun গুলো বের করুন:
+"Users can create projects and invite team members"
+→ Entities: User, Project, Team, Invitation
+```
+
+#### Schema Template
+
+```text
+┌─────────────────────────────────────┐
+│ TABLE/COLLECTION: users             │
+├─────────────────────────────────────┤
+│ id            : UUID / ObjectId     │
+│ email         : String (unique)     │
+│ password_hash : String              │
+│ role          : Enum(user, admin)   │
+│ name          : String              │
+│ avatar_url    : String (nullable)   │
+│ created_at    : Timestamp           │
+│ updated_at    : Timestamp           │
+└─────────────────────────────────────┘
+
+┌─────────────────────────────────────┐
+│ TABLE/COLLECTION: [entity]          │
+├─────────────────────────────────────┤
+│ id            : UUID / ObjectId     │
+│ user_id       : FK → users.id       │
+│ [field_1]     : Type                │
+│ [field_2]     : Type                │
+│ status        : Enum(active, draft) │
+│ created_at    : Timestamp           │
+│ updated_at    : Timestamp           │
+└─────────────────────────────────────┘
+```
+
+#### Relationships Diagram (Quick)
+
+```text
+users   ──┬── 1:N ── orders
+          │
+          └── 1:N ── projects
+                          │
+                          └── N:M ── team_members (users)
+```
+
+---
+
+### 13. API Planning
+
+**উদ্দেশ্য:** Frontend-Backend contract আগেই ঠিক করা।
+
+#### Convention
+
+```text
+Base URL   : https://api.example.com/v1
+Auth       : Bearer Token (JWT) in Authorization Header
+Content    : application/json
+Response   : { success: boolean, data: any, message: string }
+```
+
+#### Endpoints
 
 | Method | Endpoint | Auth | Description |
 |--------|----------|------|-------------|
-| POST | `/auth/register` | ❌ | নতুন user তৈরি |
-| POST | `/auth/login` | ❌ | Login, JWT return |
-| GET | `/auth/me` | ✅ | Current user info |
-| GET | `/[resource]` | ✅ | List (pagination) |
-| POST | `/[resource]` | ✅ | Create |
-| GET | `/[resource]/:id` | ✅ | Single item |
-| PUT | `/[resource]/:id` | ✅ | Update |
-| DELETE | `/[resource]/:id` | ✅ Admin | Delete |
+| **Auth** |
+| POST | `/auth/register` | ❌ | User Registration |
+| POST | `/auth/login` | ❌ | User Login, returns JWT |
+| POST | `/auth/forgot-password` | ❌ | Send Reset Email |
+| POST | `/auth/reset-password` | ❌ | Reset Password |
+| GET | `/auth/me` | ✅ | Get Current User |
+| **CRUD Operations** |
+| GET | `/[resource]` | ✅ | List (paginated) |
+| GET | `/[resource]/:id` | ✅ | Single Item |
+| POST | `/[resource]` | ✅ | Create New |
+| PUT | `/[resource]/:id` | ✅ | Update Existing |
+| DELETE | `/[resource]/:id` | 🛡️ | Delete (Admin only) |
 
-### Error Codes
-```
-400 → Bad Request (validation failed)
-401 → Unauthorized (not logged in)
-403 → Forbidden (no permission)
+#### HTTP Status Codes
+
+```text
+200 → OK (Success)
+201 → Created (Resource created)
+400 → Bad Request (Validation error)
+401 → Unauthorized (Login required)
+403 → Forbidden (Permission denied)
 404 → Not Found
-422 → Unprocessable Entity
-500 → Server Error
+422 → Unprocessable Entity (Business logic error)
+500 → Internal Server Error
 ```
 
 ---
 
-## 14. Development Roadmap
+### 14. Development Roadmap
 
-**উদ্দেশ্য:** কোন কাজ কোন order-এ করব — chaos এড়ানো।
+**উদ্দেশ্য:** কাজের order ঠিক করা — chaos এড়ানো।
 
-```
-PHASE 1 — Foundation (Week 1)
-  ✦ Project setup (Next.js / Node / DB)
-  ✦ Folder structure
-  ✦ Environment config (.env)
-  ✦ Auth system (Register, Login, JWT, Middleware)
-  ✦ Base layouts (Public, Auth, Dashboard)
+```text
+🗓️ PHASE 1 — Foundation (Week 1)
+  □ Project setup (Git, Linting, Environment)
+  □ Tech stack install (Next.js / Node / Express / MongoDB)
+  □ Folder structure finalize
+  □ Environment variables configure
+  □ Authentication system (Register, Login, JWT, Middleware)
+  □ Base layouts (Public Layout, Auth Layout, Dashboard Layout)
 
-PHASE 2 — Core Features (Week 2-3)
-  ✦ [Core Feature 1] — CRUD + UI
-  ✦ [Core Feature 2] — CRUD + UI
-  ✦ Dashboard stats
+🗓️ PHASE 2 — Core UI (Week 2)
+  □ All public pages UI (Home, About, Contact, Pricing)
+  □ Responsive design check (Mobile, Tablet, Desktop)
+  □ Reusable components build
+  □ Navigation & routing complete
 
-PHASE 3 — Supporting Features (Week 4)
-  ✦ Profile management
-  ✦ Notifications
-  ✦ Search & Filter
-  ✦ File Upload (if needed)
+🗓️ PHASE 3 — Core Features (Week 3-4)
+  □ [Core Feature 1] — Backend API + Frontend UI
+  □ [Core Feature 2] — Backend API + Frontend UI
+  □ Dashboard with real data
+  □ Search, Filter, Pagination
 
-PHASE 4 — Payment & Subscription (Week 5)
-  ✦ Stripe / SSLCommerz integration
-  ✦ Checkout flow
-  ✦ Subscription management
-  ✦ Webhook handling
+🗓️ PHASE 4 — Supporting Features (Week 5)
+  □ Profile management (Update, Avatar upload)
+  □ Email notifications (SendGrid/Resend)
+  □ File upload (if needed)
+  □ Password reset flow
 
-PHASE 5 — Admin Panel (Week 6)
-  ✦ User management
-  ✦ Content management
-  ✦ Analytics/Reports
+🗓️ PHASE 5 — Admin & Payment (Week 6)
+  □ Admin Panel (User list, Content management, Stats)
+  □ Payment Integration (Stripe / SSLCommerz)
+  □ Subscription/Order management
+  □ Webhook handling
 
-PHASE 6 — Polish & Launch (Week 7)
-  ✦ Responsive design check
-  ✦ Performance optimization
-  ✦ Error handling & loading states
-  ✦ SEO (meta tags, OG)
-  ✦ Testing
-  ✦ Deployment (Vercel + Railway/Render)
-```
-
----
-
-## 15. MVP Definition
-
-**উদ্দেশ্য:** কী না বানালেও চলবে — scope creep থেকে বাঁচা।
-
-### MoSCoW Method
-
-```
-MUST HAVE (বাদ দিলে product কাজ করবে না)
-  → Auth (Register/Login)
-  → [Core Feature 1]
-  → [Core Feature 2]
-  → Basic Dashboard
-
-SHOULD HAVE (থাকলে ভালো, না থাকলেও চলবে)
-  → Notifications
-  → Advanced Search
-  → Profile Customization
-
-NICE TO HAVE (Future-র জন্য রেখে দিন)
-  → Dark Mode
-  → Mobile App
-  → Analytics Dashboard
-  → Multi-language
-
-WON'T HAVE (এই version-এ নেই)
-  → AI features
-  → Third-party integrations
-  → [Client-র extra requests]
+🗓️ PHASE 6 — Polish & Launch (Week 7)
+  □ Loading states (Skeleton, Spinner)
+  □ Error states (Toasts, Error pages)
+  □ Empty states (Helpful messages)
+  □ SEO (Meta tags, OG images, Sitemap)
+  □ Performance optimization
+  □ Security audit
+  □ Testing (Edge cases)
+  □ Deployment (Vercel + Railway/Render/DigitalOcean)
+  □ Domain + SSL setup
+  □ Go Live 🚀
 ```
 
 ---
 
-## ✅ Pre-Development Checklist
+### 15. Deployment Checklist
 
-কোড লেখা শুরু করার আগে এই সব complete হওয়া উচিত:
-
+```text
+□ Custom domain connected
+□ SSL certificate active
+□ Environment variables set (Production)
+□ Database backups configured
+□ Error monitoring (Sentry.io)
+□ Analytics (Plausible/Google Analytics)
+□ Uptime monitoring (BetterStack)
+□ Rate limiting enabled
+□ API documentation ready
+□ Client handover document created
 ```
-BUSINESS
+
+---
+
+## ✅ Pre-Development Master Checklist
+
+```text
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📋 PHASE 1: BUSINESS (Client Sign-off)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 □ Business goal documented
 □ Target audience defined
 □ Revenue model confirmed
 □ Competitor research done
+□ MVP scope locked (Client signed off)
 
-PLANNING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🎨 PHASE 2: DESIGN (Ready for Figma)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 □ User personas created (min 2)
-□ User flow mapped
-□ Sitemap complete
-□ MVP scope locked (written, client-confirmed)
-
-DESIGN
-□ All pages listed
-□ All sections per page listed
-□ Content hierarchy per page noted
-□ Wireframe (rough) done for main pages
-□ Color palette chosen
+□ User flow mapped (Happy path + Edge cases)
+□ Sitemap complete (All routes + Access levels)
+□ Page inventory done (All pages listed)
+□ Section structure defined (Per page)
+□ Content hierarchy noted (Per section)
+□ Wireframe sketched (At least Home, Dashboard, Auth)
+□ Color palette selected
 □ Typography chosen
+□ Spacing system defined
 □ Component list ready
 
-TECHNICAL
-□ Database schema drafted
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🛠️ PHASE 3: TECHNICAL (Ready for Dev)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+□ Database schema designed
 □ API endpoints listed
-□ Folder structure planned
 □ Tech stack confirmed
+□ Folder structure planned
+□ Environment variables documented
 □ Deployment plan decided
 
-BUSINESS (Client Sign-off)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✍️ PHASE 4: AGREEMENT (Client Sign-off)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 □ Requirement document sent to client
 □ Timeline agreed
-□ Payment terms agreed
-□ Scope clearly defined (to avoid scope creep)
+□ Payment terms agreed (50% advance suggested)
+□ Scope clearly defined (Extra = Extra charge)
+□ Contract signed (if applicable)
 ```
 
 ---
 
-## 🤖 AI Mega-Prompt
+## 🤖 AI Mega-Prompts
 
-**যখনই নতুন প্রজেক্ট পাবেন, এই prompt copy করুন এবং `[PROJECT REQUIREMENTS]` replace করুন।**
+### Prompt 1: Design Track Only (ছোট প্রজেক্ট)
 
-```
-Act as a Senior Product Manager, UX Designer, Solution Architect,
-and Full-Stack Developer combined.
+```text
+Act as a Senior Product Manager and Senior UX Designer.
 
 Analyze the following project requirements and generate a complete
-pre-development blueprint:
+FIGMA DESIGN BLUEPRINT. Include only:
 
-1.  Business Analysis
-    - Business Goal, Problem, Solution, Target Audience, Revenue Model
+1. Business Analysis (Goal, Problem, Solution, Audience)
+2. Competitor Design Research (3 competitors, analyze their UI/UX patterns)
+3. User Persona (Primary user with Goals and Pain Points)
+4. User Flow (Happy path + 3 edge cases)
+5. Sitemap (All pages with Public/Auth/Admin labels)
+6. Page Inventory (With P1/P2/P3 priority)
+7. Section Structure (Every page, every section breakdown)
+8. Content Hierarchy (What user sees 1st, 2nd, 3rd)
+9. Wireframe Description (ASCII-style for Home, Dashboard, Auth pages)
+10. Design System (Theme, 6-color palette, typography scale, components list)
+11. Design Inspiration (3 reference websites with what to adopt)
 
-2.  Competitor Analysis
-    - 5 competitors with Strengths, Weaknesses, Opportunities
-
-3.  User Personas
-    - 2 detailed personas with Goals, Pain Points, Devices
-
-4.  User Flow
-    - Main happy path + 3 alternative flows + edge cases
-
-5.  Sitemap
-    - Full page tree with access levels (Public/Auth/Admin)
-
-6.  Feature List
-    - Organized by role: Public / User / Admin
-
-7.  Page Inventory
-    - Each page with route, access level, priority (P1/P2/P3)
-
-8.  Section Structure
-    - Every section for every page with component details
-
-9.  Wireframe Description
-    - Text-based ASCII wireframe for Home, Dashboard, Auth pages
-
-10. Design System
-    - Theme, Color Palette (6 colors with hex), Typography, Component list
-
-11. Database Schema
-    - All collections/tables with fields, types, relationships
-
-12. API Endpoints
-    - Method, Route, Auth required, Description (table format)
-
-13. Development Roadmap
-    - Phase-by-phase breakdown with estimated time
-
-14. MVP Scope
-    - MoSCoW: Must / Should / Nice-to-have / Won't have
-
-15. Future Scope
-    - Features for v2, v3
-
----
 Project Requirements:
+[Paste Client Requirements Here]
+```
 
-[PROJECT REQUIREMENTS এখানে paste করুন]
+### Prompt 2: Complete Project (বড় প্রজেক্ট)
+
+```text
+Act as a Senior Product Manager, UX Designer, Solution Architect,
+and Senior Full-Stack Developer combined.
+
+Analyze the following project requirements and generate a complete
+PRE-DEVELOPMENT BLUEPRINT. Include all 15 sections:
+
+1. Business Analysis (Goal, Problem, Solution, Audience, Revenue Model)
+2. Competitor Analysis (5 competitors, Strengths, Weaknesses, Opportunities)
+3. User Personas (2 detailed personas)
+4. User Flow (Happy path + Alternative flows + Edge cases)
+5. Sitemap (Full tree with access levels)
+6. Page Inventory (With P1/P2/P3 priority)
+7. Section Structure (Every section for every page)
+8. Content Hierarchy (Visual priority per section)
+9. Wireframe Description (ASCII for Home, Dashboard, Auth)
+10. Design System (Theme, Colors with hex, Typography, Components)
+11. Feature Breakdown (MoSCoW: Must, Should, Could, Won't)
+12. Database Schema (All tables/collections with relationships)
+13. API Endpoints (Method, Route, Auth, Description table)
+14. Development Roadmap (Phase-by-phase, weekly breakdown)
+15. MVP Scope + Future Scope (v2, v3 features)
+
+Project Requirements:
+[Paste Client Requirements Here]
 ```
 
 ---
 
-## 💡 Quick Reference: Common Project Types
+## 💡 Quick Reference by Project Type
 
-### SaaS / Dashboard Project
-```
-Core pages: Landing → Pricing → Auth → Dashboard → Settings
-Key sections: Stats cards, Data tables, Charts, Sidebar nav
-DB essentials: users, subscriptions, [core entity]
-```
+| Project Type | Key Pages | Key Sections | Core DB Entities |
+|--------------|-----------|--------------|------------------|
+| **SaaS/Dashboard** | Landing, Pricing, Auth, Dashboard, Settings | Stats Cards, Data Table, Charts, Sidebar | users, subscriptions, [entity] |
+| **E-commerce** | Home, Category, Product, Cart, Checkout | Product Grid, Filters, Cart Drawer | users, products, categories, orders |
+| **LMS/Course** | Home, Courses, Detail, Lesson, Dashboard | Course Grid, Video Player, Progress Tracker | users, courses, lessons, enrollments |
+| **Portfolio/Agency** | Home, About, Portfolio, Services, Contact | Hero, Work Grid, Testimonials | projects, testimonials, messages |
+| **Blog/Content** | Home, Blog List, Blog Detail, About | Article Card, Sidebar, Newsletter | users, posts, categories, comments |
 
-### E-commerce Project
-```
-Core pages: Home → Category → Product → Cart → Checkout → Orders
-Key sections: Product grid, Filters, Product detail, Cart drawer
-DB essentials: users, products, categories, orders, payments
-```
+---
 
-### LMS / Course Platform
-```
-Core pages: Home → Courses → Course Detail → Lesson → Dashboard
-Key sections: Course card grid, Video player, Progress tracker
-DB essentials: users, courses, lessons, enrollments, progress
-```
+## 🚀 Final Words
 
-### Portfolio / Agency Site
-```
-Core pages: Home → About → Portfolio → Services → Contact
-Key sections: Hero, Work showcase, Testimonials, CTA
-DB essentials: projects, testimonials, contact_messages
+```text
+┌─────────────────────────────────────────────────────┐
+│                                                     │
+│   🧠 Think Like a Product Manager                   │
+│   🎨 Design Like a UX Designer                      │
+│   🛠️ Build Like a Senior Developer                  │
+│   📈 Deliver Like a Professional Freelancer         │
+│                                                     │
+│   ছোট প্রজেক্ট → Phase 1 + Phase 2 করুন             │
+│   বড় প্রজেক্ট   → পুরো ১৫টা ধাপ করুন               │
+│                                                     │
+└─────────────────────────────────────────────────────┘
 ```
 
 ---
 
-*Last Updated: 2025 | Made for Freelance Full-Stack Developers*
+*Made with ❤️ for Solo Full-Stack Developers | Last Updated: 2025*
+
+
